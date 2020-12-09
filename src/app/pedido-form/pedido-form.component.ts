@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input, Output,EventEmitter } from '@angular/core';
 
 import { Pedido } from '../pedido';
 
@@ -13,9 +13,11 @@ export class PedidoFormComponent {
     categoria: "Tecnologia"
   }*/
 
+  @Input() tituloFormPedido: string; // decorate the property with @Input()
+  @Output() newItemEvent = new EventEmitter<string>(); //TODO
+
   produtos = ['Produto A', 'Produto B', 'Produto C', 'Produto D', 'Produto E'];
-
-
+  
   model = new Pedido(1, 'Hermione Granger', this.produtos[0], false, '09/12/2020');
 
   submitted = false;
@@ -23,6 +25,7 @@ export class PedidoFormComponent {
   onSubmit() { this.submitted = true; }
 
   newPedido() {
+    this.newItemEvent.emit();//TODO
     this.model = new Pedido(3, '', '', false, '');
   }
 }

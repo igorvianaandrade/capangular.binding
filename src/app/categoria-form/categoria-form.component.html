@@ -1,0 +1,33 @@
+<div class="container">
+    <div [hidden]="submitted">
+      <h1>{{tituloFormCategoria}} Categoria</h1>
+      
+      <form (ngSubmit)="onSubmit()" #categoriaForm="ngForm">
+       
+        <div class="form-group">
+          <label for="categoria">Categoria</label>
+          <input type="text" class="form-control" id="categoria"
+                 required
+                 [(ngModel)]="model.nomeCategoria" name="categoria" #cliente="ngModel">
+          <div [hidden]="cliente.valid || cliente.pristine"
+               class="alert alert-danger">
+            categoria é obrigatório
+          </div>
+        </div>        
+        
+        <button type="submit" class="btn btn-success" [disabled]="!categoriaForm.form.valid">Submeter</button>
+        <button type="button" class="btn btn-default" (click)="newPedido(); categoriaForm.reset()">Nova Categoria</button>
+      </form>
+    </div>
+  
+    <div [hidden]="!submitted">
+      <h2>Categorias que você enviou:</h2>
+      
+      <div class="row">
+        <div class="col-xs-3">Categoria</div>
+        <div class="col-xs-9">{{ model.nomeCategoria }}</div>
+      </div>      
+      <br>
+      <button class="btn btn-primary" (click)="submitted=false">Editar</button>
+    </div>
+  </div>
