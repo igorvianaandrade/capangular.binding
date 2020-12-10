@@ -1,5 +1,7 @@
 import { Component, Input, Output,EventEmitter } from '@angular/core';
 
+import { Categoria, CategoriaInterface } from '../Categoria'; 
+
 @Component({
   selector: 'app-categoria-form',
   templateUrl: './categoria-form.component.html'
@@ -10,7 +12,7 @@ export class CategoriaFormComponent {
   @Input() tituloFormCategoria: string; 
   @Output() newItemEvent = new EventEmitter<string>(); //TODO
     
-  model = {nomeCategoria: 'Eletrodomestico', codigoCategoria : '1', desconto: '10%'};
+  model: CategoriaInterface = {nome: 'Eletrodomestico', codigoCategoria : '1', desconto: '10%'};
 
   submitted = false;
 
@@ -18,6 +20,6 @@ export class CategoriaFormComponent {
 
   newPedido() {
     this.newItemEvent.emit();//TODO
-    this.model = {nomeCategoria: 'Teste', codigoCategoria : '50', desconto: ''};
+    this.model = {nome: 'Teste', codigoCategoria : '50', desconto: ''};
   }
 }
