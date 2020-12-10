@@ -8,12 +8,8 @@ import { Pedido } from '../pedido';
   styleUrls: ['./pedido-form.component.css']
 })
 export class PedidoFormComponent {
-  /* private produtoA = {
-    nome:"Produto A ",
-    categoria: "Tecnologia"
-  }*/
 
-  @Input() tituloFormPedido: string; // decorate the property with @Input()
+  @Input() tituloFormPedido: string;
   
   @Output() novoPedidoEvent = new EventEmitter();
 
@@ -23,11 +19,11 @@ export class PedidoFormComponent {
 
   submitted = false;
 
+  codigoPedido = '1';
+  
   onSubmit() { this.submitted = true; 
     this.novoPedidoEvent.emit(this.codigoPedido);
-  }
-
-  codigoPedido = '1';
+  } 
 
   newPedido() {    
     this.model = new Pedido(3, '', '', false, '');

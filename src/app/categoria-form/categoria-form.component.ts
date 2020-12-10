@@ -10,7 +10,8 @@ import { Categoria, CategoriaInterface } from '../Categoria';
 export class CategoriaFormComponent {  
 
   @Input() tituloFormCategoria: string; 
-  @Output() newItemEvent = new EventEmitter<string>(); //TODO
+
+  @Output() novaCategoriaEvent = new EventEmitter();
   
   descontos = ['2%', '5%', '10%', '20%'];
 
@@ -18,10 +19,13 @@ export class CategoriaFormComponent {
 
   submitted = false;
 
-  onSubmit() { this.submitted = true; }
+  codigoCategoria = '1';
 
-  newPedido() {
-    this.newItemEvent.emit();//TODO
+  onSubmit() { this.submitted = true; 
+    this.novaCategoriaEvent.emit(this.codigoCategoria);
+  }
+
+  newPedido() {    
     this.model = {nome: 'Teste', codigoCategoria : '50', desconto: ''};
   }
 }
