@@ -1,22 +1,18 @@
-# capangular.typescript2
+Angular - Binding
+Desafio
 
-## 2º Desafio
+Realize um Fork no projeto principal do e-commerce e aplique todos os conceitos vistos na aula de hoje. Tais conceitos como:
 
-Utilizar a mesma especificação do 1º desafio para realizar a implementação no Angular da proposta dada.
+- Event Binding
+- Property Binding
+- Two-way Binding
+- @Input Decorator
+- @Output Decorator
 
 Premissas:
+- Construir todos os formulários de todas as Models do seu sistema de e-commerce, e realizar interação deles com o uso de Components;
+- Cada Model deverá ser OBRIGATORIAMENTE um Component;
+- Aplicar o máximo de exemplos e assuntos vistos acima em todos os formulários.
 
-- Utilizar o conceito de Formulários para implementar o desafio;
-- Realizar o trabalho em grupo.
-
-### Instrução
-
-Entre na pasta via prompt de comando e os comandos digite:
-
-```
-npm install
-npm start ou ng serve
-```
-
-Acesse a aplicação no navegador: localhost:4200
-
+Repositório:
+[GitHub User]/capangular.binding
