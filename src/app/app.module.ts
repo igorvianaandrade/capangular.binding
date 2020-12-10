@@ -6,13 +6,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PedidoFormComponent } from './pedido-form/pedido-form.component';
 import { CategoriaFormComponent } from './categoria-form/categoria-form.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,    
     PedidoFormComponent,
-    CategoriaFormComponent
+    CategoriaFormComponent,
+    NavbarComponent
 
   ],
   imports: [
