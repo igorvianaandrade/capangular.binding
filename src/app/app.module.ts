@@ -4,15 +4,13 @@ import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeroFormComponent } from './hero-form/hero-form.component';
 import { PedidoFormComponent } from './pedido-form/pedido-form.component';
 import { CategoriaFormComponent } from './categoria-form/categoria-form.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent,
-    HeroFormComponent,
+    AppComponent,    
     PedidoFormComponent,
     CategoriaFormComponent
 
