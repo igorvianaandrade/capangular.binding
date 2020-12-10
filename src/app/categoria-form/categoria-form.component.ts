@@ -1,12 +1,13 @@
 import { Component, Input, Output,EventEmitter } from '@angular/core';
 
-import { Categoria, CategoriaInterface } from '../Categoria'; 
+import { Categoria, CategoriaInterface } from './../model/categoria.model'; 
 
 @Component({
   selector: 'app-categoria-form',
   templateUrl: './categoria-form.component.html'
   //styleUrls: ['./categoria-form.component.css']
 })
+
 export class CategoriaFormComponent {  
 
   @Input() tituloFormCategoria: string; 
