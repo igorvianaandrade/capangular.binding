@@ -15,6 +15,19 @@
           </div>
         </div>        
         
+        <div class="form-group">
+          <label for="desconto">Descontos</label>
+          <select class="form-control" id="desconto"
+                  required
+                  [(ngModel)]="model.desconto" name="desconto"
+                  #desconto="ngModel">
+            <option *ngFor="let desconto of descontos" [value]="desconto">{{desconto}}</option>
+          </select>
+          <div [hidden]="desconto.valid || desconto.pristine" class="alert alert-danger">
+            Desconto é obrigatório!s
+          </div>
+        </div>
+
         <button type="submit" class="btn btn-success" [disabled]="!categoriaForm.form.valid">Submeter</button>
         <button type="button" class="btn btn-default" (click)="newPedido(); categoriaForm.reset()">Nova Categoria</button>
       </form>
@@ -26,7 +39,13 @@
       <div class="row">
         <div class="col-xs-3">Categoria</div>
         <div class="col-xs-9">{{ model.nome }}</div>
-      </div>      
+      </div> 
+
+      <div class="row">
+        <div class="col-xs-3">Desconto</div>
+        <div class="col-xs-9">{{ model.desconto }}</div>
+      </div> 
+
       <br>
       <button class="btn btn-primary" (click)="submitted=false">Editar</button>
     </div>

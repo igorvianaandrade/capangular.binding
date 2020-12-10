@@ -25,7 +25,7 @@ export class PedidoFormComponent {
   onSubmit() { this.submitted = true; }
 
   newPedido() {
-    this.newItemEvent.emit();//TODO
+    this.newItemEvent.emit();//TODO OUTPUT
     this.model = new Pedido(3, '', '', false, '');
   }
 }

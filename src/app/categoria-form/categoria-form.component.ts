@@ -11,8 +11,10 @@ export class CategoriaFormComponent {
 
   @Input() tituloFormCategoria: string; 
   @Output() newItemEvent = new EventEmitter<string>(); //TODO
-    
-  model: CategoriaInterface = {nome: 'Eletrodomestico', codigoCategoria : '1', desconto: '10%'};
+  
+  descontos = ['2%', '5%', '10%', '20%'];
+
+  model: CategoriaInterface = {nome: 'Eletrodomestico', codigoCategoria : '1', desconto: this.descontos[0]};
 
   submitted = false;
 
