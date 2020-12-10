@@ -1,5 +1,10 @@
-<app-pedido-form [tituloFormPedido]="tituloFormAppComponent"></app-pedido-form>
-<br><br><br>
+<app-pedido-form [tituloFormPedido]="tituloFormAppComponent"
+                (novoPedidoEvent)=novoItemCadastrado($event)>
+</app-pedido-form>
+
+<br>
+<br>
+<br>
 <div class="content">
     <app-categoria-form [tituloFormCategoria]="tituloFormAppComponent"></app-categoria-form>
 </div>

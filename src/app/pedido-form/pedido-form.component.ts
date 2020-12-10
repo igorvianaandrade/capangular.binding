@@ -14,7 +14,8 @@ export class PedidoFormComponent {
   }*/
 
   @Input() tituloFormPedido: string; // decorate the property with @Input()
-  @Output() newItemEvent = new EventEmitter<string>(); //TODO
+  
+  @Output() novoPedidoEvent = new EventEmitter();
 
   produtos = ['Produto A', 'Produto B', 'Produto C', 'Produto D', 'Produto E'];
   
@@ -22,10 +23,13 @@ export class PedidoFormComponent {
 
   submitted = false;
 
-  onSubmit() { this.submitted = true; }
+  onSubmit() { this.submitted = true; 
+    this.novoPedidoEvent.emit(this.codigoPedido);
+  }
 
-  newPedido() {
-    this.newItemEvent.emit();//TODO OUTPUT
+  codigoPedido = '1';
+
+  newPedido() {    
     this.model = new Pedido(3, '', '', false, '');
   }
 }
