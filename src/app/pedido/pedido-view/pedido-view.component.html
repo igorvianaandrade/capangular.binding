@@ -1,4 +1,4 @@
-<!--<div class="table-striped">
+<div class="table-striped">
 <table class="table" border="1">
     <tr>
       <td><b>Id</b></td>
@@ -8,7 +8,7 @@
       <td><b>Data</b></td>
     </tr>
   
-    <tr *ngFor="let pedido of pedidos">
+    <tr *ngFor="let pedido of rowData">
       <td>{{pedido.id}}</td>
       <td>{{pedido.cliente}}</td>
       <td>{{pedido.produto}}</td>
@@ -16,8 +16,8 @@
       <td>{{pedido.data}}</td>
     </tr>
   </table>
-</div>-->
-<div class="row">  
+</div>
+<div class="row">
     <ag-grid-angular
         style="width: 500px; height: 500px;"
         class="ag-theme-alpine"

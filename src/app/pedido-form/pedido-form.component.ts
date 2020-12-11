@@ -22,7 +22,7 @@ export class PedidoFormComponent {
   codigoPedido = '1';
   
   onSubmit() { this.submitted = true; 
-    this.novoPedidoEvent.emit(this.codigoPedido);
+    this.novoPedidoEvent.emit(this.model);
   } 
 
   newPedido() {       
