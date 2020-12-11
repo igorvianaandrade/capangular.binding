@@ -1,4 +1,4 @@
-export class Pedido {
+/*export class Pedido {
 
     constructor(
       public id: number,
@@ -9,3 +9,12 @@ export class Pedido {
     ) {  }
   
   }
+  */
+
+  export interface Pedido {
+    id: number,
+    cliente: string;
+    produto: string;
+    freteTarifado: boolean;
+    data?: string;
+}

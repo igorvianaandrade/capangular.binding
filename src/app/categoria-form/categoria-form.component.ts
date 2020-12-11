@@ -1,6 +1,6 @@
 import { Component, Input, Output,EventEmitter } from '@angular/core';
 
-import { Categoria, CategoriaInterface } from './../model/categoria.model'; 
+import { Categoria } from './../model/categoria.model'; 
 
 @Component({
   selector: 'app-categoria-form',
@@ -16,7 +16,7 @@ export class CategoriaFormComponent {
   
   descontos = ['2%', '5%', '10%', '20%'];
 
-  model: CategoriaInterface = {nome: 'Eletrodomestico', codigoCategoria : '1', desconto: this.descontos[0]};
+  model: Categoria = {nome: '', codigoCategoria : '', desconto: ''};
 
   submitted = false;
 

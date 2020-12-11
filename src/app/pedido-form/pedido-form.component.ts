@@ -1,6 +1,6 @@
 import { Component, Input, Output,EventEmitter } from '@angular/core';
 
-import { Pedido } from '../pedido';
+import { Pedido } from './../model/pedido.model';
 
 @Component({
   selector: 'app-pedido-form',
@@ -15,7 +15,7 @@ export class PedidoFormComponent {
 
   produtos = ['Produto A', 'Produto B', 'Produto C', 'Produto D', 'Produto E'];
   
-  model = new Pedido(1, 'Hermione Granger', this.produtos[0], false, '09/12/2020');
+  model: Pedido = {id: 0, cliente: '', produto: '', freteTarifado: false, data: ''};
 
   submitted = false;
 
@@ -25,7 +25,7 @@ export class PedidoFormComponent {
     this.novoPedidoEvent.emit(this.codigoPedido);
   } 
 
-  newPedido() {    
-    this.model = new Pedido(3, '', '', false, '');
+  newPedido() {       
+    this.model = {id: 0, cliente: '', produto: '', freteTarifado: false, data: ''};
   }
 }
