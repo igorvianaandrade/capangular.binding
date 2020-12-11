@@ -1,0 +1,17 @@
+<table border="1">
+    <tr>
+      <td><b>Id</b></td>
+      <td><b>Cliente</b></td>
+      <td><b>Produto</b></td>
+      <td><b>Frete</b></td>
+      <td><b>Data</b></td>
+    </tr>
+  
+    <tr *ngFor="let pedido of pedidos">
+      <td>{{pedido.id}}</td>
+      <td>{{pedido.cliente}}</td>
+      <td>{{pedido.produto}}</td>
+      <td>{{pedido.freteTarifado}}</td>
+      <td>{{pedido.data}}</td>
+    </tr>
+  </table>

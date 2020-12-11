@@ -8,6 +8,7 @@ import { PedidoFormComponent } from './pedido-form/pedido-form.component';
 import { CategoriaFormComponent } from './categoria-form/categoria-form.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AgGridModule } from 'ag-grid-angular';
+import { PedidoViewComponent } from './pedido/pedido-view/pedido-view.component';
 
 
 @NgModule({
@@ -15,8 +16,8 @@ import { AgGridModule } from 'ag-grid-angular';
     AppComponent,    
     PedidoFormComponent,
     CategoriaFormComponent,
-    NavbarComponent
-
+    NavbarComponent,
+    PedidoViewComponent
   ],
   imports: [
     BrowserModule,
