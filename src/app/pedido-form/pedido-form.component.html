@@ -1,5 +1,6 @@
 <div class="container">
-    <div [hidden]="submitted">
+
+    <div class="row" [hidden]="submitted">
       <h1>{{tituloFormPedido}} Pedido do Cliente</h1>
       
       <form (ngSubmit)="onSubmit()" #pedidoForm="ngForm">
@@ -46,8 +47,14 @@
         <button type="button" class="btn btn-default" (click)="newPedido(); pedidoForm.reset()">Novo Pedido</button>
       </form>
     </div>
-  
-    <div [hidden]="!submitted">
+    <br><br><br>
+    <div class="row" [hidden]="submitted">
+      <div class="col-sm-12">
+        <app-pedido-view></app-pedido-view>
+      </div>
+    </div>
+
+    <div class="row" [hidden]="!submitted">
       <h2>Pedido que você enviou:</h2>
       
       <div class="row">
